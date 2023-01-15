@@ -1,0 +1,194 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Figtree';
+}
+
+.main-body {
+    margin-bottom: 3rem;
+}
+
+.nav-link {
+    color: #f0ecf1;
+}
+
+.navbar-custom {
+    background-color: #423e43;
+    max-height: 8rem;
+}
+
+.nav-logo {
+    width: 7rem;
+    height: 7rem;
+}
+
+.btn-primary {
+    background-color: #f2be32 !important;
+    border-color: #f2be32 !important;
+}
+
+.btn-other {
+    background-color: #423e43 !important;
+    border-color: #423e43 !important;
+    color: #f0ecf1;
+}
+
+.card-deck {
+    padding-top: 3em;
+}
+
+.about-img {
+    width: 100%;
+    height: 22em;
+    object-fit: cover;
+    object-position: 0% 20%;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+    object-position: 0% 20%;
+}
+
+.services-img {
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+    object-position: 0% 20%;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: 0% 20%;
+}
+
+.card {
+    border: 5px solid #d7a5e1;
+}
+
+.footer {
+    padding-top: 2em;
+    margin-top: auto;
+    padding-bottom: 1em;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d7a5e1;
+    color: #f0ecf1;
+}
+
+
+
+.icon {
+    width: 5em;
+    height: 5em;
+}
+
+span {
+    display: block;
+}
+
+.fa-envelope {
+    padding-top: 1em;
+}
+
+.about-title {
+    color: #423e43;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.subjects-title {
+    color: #423e43;
+    padding-top: 0.3em;
+    text-align: center;
+}
+
+.sub-card{
+    font-size: 0.9em;
+    color: #f2be32;
+}
+
+.card-header {
+    background-color: #423e43;
+    color: #f0ecf1;
+}
+
+.card-title {
+    font-size: 1.2em;
+}
+
+.separator {
+    margin-top: 3em;
+}
+
+.carousel-caption {
+    background-color: #423e43;
+    color: #f0ecf1;
+
+}
+
+.price-carousel {
+    color: #f2be32;
+}
+
+.sign-up-bottom {
+    margin-top: 2em;
+    width: 100%;
+    height: 4em;
+    text-align: center;
+}
+
+.jumbotron {
+    height: 100vh;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+
+.jumbo-text {
+    margin-top: 30vh;
+    text-align: center;
+    background-color: #f2be32;
+    color: #f0ecf1;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.ace-title {
+    margin-top: 3rem;
+}
+  
+.home-pics {
+    margin-top: 0;
+    width: 16rem;
+    height: 16rem;
+}
+
+.pic-container {
+    background-color: #f0ecf1;
+    text-align: center;
+}
+
+.alert-primary {
+    color: #f0ecf1;
+    background-color: #d7a5e1;
+    border-color: #d7a5e1;
+}
+
+.display-4 {
+    font-size: 8vh;
+}
+
+.lead {
+    font-size: 3vh;
+}
