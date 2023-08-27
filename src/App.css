@@ -1,3 +1,7 @@
+.content {
+    padding-bottom: 10em;
+}
+
 html {
     height: 100%;
 }
@@ -14,7 +18,7 @@ body {
     margin-bottom: 3rem;
 }
 
-.nav-link {
+.nav-link-main {
     color: #f0ecf1 !important;
 }
 
@@ -75,17 +79,6 @@ body {
     border: 5px solid #d7a5e1;
 }
 
-.footer {
-    padding-top: 2em;
-    margin-top: auto;
-    padding-bottom: 3em;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #d7a5e1;
-    color: #f0ecf1;
-}
-
 
 
 .icon {
@@ -118,14 +111,15 @@ span {
     color: #f2be32;
 }
 
-.card-header {
+.card-header-tutor {
     background-color: #423e43 !important;
     color: #f0ecf1;
 }
 
-.card-title {
+.card-title-tutor {
     font-size: 1.2em;
 }
+
 
 .separator {
     margin-top: 3em;
@@ -181,9 +175,9 @@ span {
 }
 
 .alert-primary {
-    color: #f0ecf1;
-    background-color: #d7a5e1;
-    border-color: #d7a5e1;
+    color: #f0ecf1 !important;
+    background-color: #d7a5e1 !important;
+    border-color: #d7a5e1 !important;
 }
 
 .display-4 {
@@ -193,3 +187,17 @@ span {
 .lead {
     font-size: 3vh !important;
 }
+
+.footer {
+  position: fixed;
+  padding-top: 2em;
+  margin-top: auto;
+  padding-bottom: 3em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #d7a5e1;
+  color: #f0ecf1;
+}
+
+

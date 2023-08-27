@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Tutors.css';
 
 class Tutors extends Component {
 
@@ -11,8 +12,8 @@ class Tutors extends Component {
 					    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
 					      <div className="card" style={{height: '100%'}}>
 					        <img className="card-img-top about-img" src="Andrew.jpg" alt="Andrew Jenke" />
-					        <div className="card-header">
-					          <h5 className="card-title">Andrew Jenke</h5>
+					        <div className="card-header card-header-tutor">
+					          <h5 className="card-title card-title-tutor">Andrew Jenke</h5>
 					          <p className="card-text sub-card">
 					            <b>99.90 ATAR</b>
 					          </p>
@@ -34,8 +35,8 @@ class Tutors extends Component {
 					    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
 					      <div className="card" style={{height: '100%'}}>
 					        <img className="card-img-top about-img" src="Isaiah.jpg" alt="Isaiah Ajaero" />
-					        <div className="card-header">
-					          <h5 className="card-title">Isaiah Ajaero</h5>
+					        <div className="card-header card-header-tutor">
+					          <h5 className="card-title card-title-tutor">Isaiah Ajaero</h5>
 					          <p className="card-text sub-card">
 					            <b>99.65 ATAR</b>
 					          </p>
@@ -54,8 +55,8 @@ class Tutors extends Component {
 					    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
 					      <div className="card" style={{height: '100%'}}>
 					        <img className="card-img-top about-img" src="Jaiden.jpg" alt="Jaiden Douglas" />
-					        <div className="card-header">
-					          <h5 className="card-title">Jaiden Douglas</h5>
+					        <div className="card-header card-header-tutor">
+					          <h5 className="card-title card-title-tutor">Jaiden Douglas</h5>
 					          <p className="card-text sub-card">
 					            <b>99.65 ATAR</b>
 					          </p>

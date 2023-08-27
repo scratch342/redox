@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './NavbarComp.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+
 
 class NavbarComp extends Component {
 
@@ -19,6 +18,13 @@ class NavbarComp extends Component {
   onSubmitSignInThree = () => {
     this.props.onRouteChange('services');
   }  
+  onSubmitSignInFour = () => {
+    this.props.onRouteChange('login');
+  }  
+  onSubmitSignInFive = () => {
+    this.props.onRouteChange('register');
+  }  
+
 
   onRegisterInterest = () => {
   	window.open("https://forms.gle/SDwrfyzdXWVyr76W6", "_blank");
@@ -48,25 +54,25 @@ class NavbarComp extends Component {
 				  >
 				    <ul className="navbar-nav ml-auto">
 				      <li className="nav-item nav-text">
-				        <a className="nav-link" href="#" onClick={this.onSubmitSignInTwo}>
+				        <a className="nav-link nav-link-main" href="#" onClick={this.onSubmitSignInTwo}>
 				          Tutors
 				        </a>
 				      </li>
 				      <li className="nav-item nav-text">
-				        <a className="nav-link" href="#" onClick={this.onSubmitSignInThree}>
+				        <a className="nav-link nav-link-main" href="#" onClick={this.onSubmitSignInThree}>
 				          Services
 				        </a>
 				      </li>
 				      <li className="nav-item">
 				        <button onClick={this.onRegisterInterest} className="btn btn-primary sign-up">
-				          Click here to sign-up
+				          Express Interest
 				        </button>
 				      </li>
 				      <li className="nav-item">
-				        <button className="btn btn-secondary">Student Portal</button>
-				      </li>
+				        <button className="btn btn-secondary" onClick={this.onSubmitSignInFour}>Login Portal</button>
+				      </li>	
 				      <li className="nav-item">
-				        <button className="btn btn-secondary">Staff Portal</button>
+				        <button className="btn btn-secondary" onClick={this.onSubmitSignInFive}>Register Portal</button>
 				      </li>
 				    </ul>
 				  </div>
