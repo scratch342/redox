@@ -20,11 +20,12 @@ class Login extends Component {
 		}
   }
   
-  onSubmitSignInStudent = () => {
+  onSubmitSignInStudent = (event) => {
+      event.preventDefault();
       console.log(this.state.signinEmail)
       console.log(this.state.signinPassword)
       
-  		fetch('http://localhost:5500/signinStudent', {
+  		fetch('http://localhost:5500/signInStudent', {
   			method: 'post',
   			headers: {'Content-Type': 'application/json'},
   			body: JSON.stringify({
@@ -37,8 +38,10 @@ class Login extends Component {
       })
 		.then(user => {
 		    if(user){
+          console.log(user)
           this.props.loadStudentUser(user)
 				  this.props.onRouteChange('studentPortal');
+          this.props.onLogIn()
 		    }
 		})
     .catch(e => {
@@ -47,11 +50,37 @@ class Login extends Component {
     
   }  
 
-  onSubmitSignInStaff = () => {
-    this.props.onRouteChange('staffPortal');
+
+  onSubmitSignInStaff = (event) => {
+
+      event.preventDefault();
+      fetch('http://localhost:5500/signInStaff', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          email: this.state.signinEmail,
+          password: this.state.signinPassword
+        })
+      }).then(response => {
+        if (response.ok) return response.json()
+          return response.json().then(json => Promise.reject(json))
+      })
+    .then(user => {
+        if(user){
+          console.log(user)
+          this.props.loadStaffUser(user)
+          this.props.onRouteChange('staffPortal');
+          this.props.onLogIn()
+        }
+    })
+    .catch(e => {
+      console.log(alert(e))
+    })
+
   }
   
   onEmailChange = (event) => {
+    console.log(this.state.signinEmail)
 		this.setState({signinEmail: event.target.value});
 	}
 	onPasswordChange = (event) => {

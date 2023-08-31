@@ -26,9 +26,6 @@ class NavbarComp extends Component {
   }  
 
 
-  onRegisterInterest = () => {
-  	window.open("https://forms.gle/SDwrfyzdXWVyr76W6", "_blank");
-  }
 
 	render(){
 		return (
@@ -46,7 +43,7 @@ class NavbarComp extends Component {
 				    aria-expanded="false"
 				    aria-label="Toggle navigation"
 				  >
-				    <span className="navbar-toggler-icon" />
+				    <span className="navbar-toggler-icon"></span>
 				  </button>
 				  <div
 				    className="navbar-collapse collapse w-100 order-3 dual-collapse2"
@@ -63,11 +60,7 @@ class NavbarComp extends Component {
 				          Services
 				        </a>
 				      </li>
-				      <li className="nav-item">
-				        <button onClick={this.onRegisterInterest} className="btn btn-primary sign-up">
-				          Express Interest
-				        </button>
-				      </li>
+
 				      <li className="nav-item">
 				        <button className="btn btn-secondary" onClick={this.onSubmitSignInFour}>Login Portal</button>
 				      </li>	

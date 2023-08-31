@@ -44,7 +44,30 @@ class StudentPortal extends Component {
 	}
 
 
-
+	onPaySingle = (e) => {
+		e.preventDefault();
+		console.log(e.target.id)
+		fetch('http://localhost:5500/paySingle', {
+			method: 'post',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify({
+				id: e.target.id
+			})
+		}).then(response => {
+      if (response.ok) return response.json()
+        return response.json().then(json => Promise.reject(json))
+    })
+	.then(url => {
+		console.log(url.url)
+		window.open(
+  		url.url,
+  		'_blank' // <- This is what makes it open in a new window.
+		);
+	})
+  .catch(e => {
+    console.log(alert(e))
+  })
+	}
 
 
   render(){
@@ -89,18 +112,23 @@ class StudentPortal extends Component {
 							  {
 							  	this.props.studentUser.outstandingPaymentsInfo.map((outstandingPayment) => (
 								    <tr key={outstandingPayment.id}>
-								      <td>{outstandingPayment.tutorFirstName} {outstandingPayment.tutorLastName}</td>
+								      <td>{outstandingPayment.staffFirstName} {outstandingPayment.staffLastName}</td>
 								      <td>{outstandingPayment.service}</td>
 								      <td>{outstandingPayment.price}</td>
 								      <td>{outstandingPayment.serviceDate}</td>
-								      <td><button className="btn btn-primary">Pay</button></td>
+								      <td><button className="btn btn-primary" id={outstandingPayment.id} onClick={this.onPaySingle} >Pay</button></td>
 								    </tr>
 							  		))
 
 							  }
 							  </tbody>
 							</table>
+							{
+							this.props.studentUser.outstandingPaymentsInfo.length === 0 ?
+							<span></span>
+							:
 							<button className="btn btn-primary btn-pay-all"><b>Pay all</b></button>
+							}
 					  </div>
 
 					  :
@@ -118,11 +146,80 @@ class StudentPortal extends Component {
 							    </tr>
 							  </thead>
 							  <tbody className="bulk-tbody">
+
+
+							  {//Rendering for Biology Bulk Payment
+							  	this.props.studentUser.studentInfo.biologyBulk == false ?
+							  
 							    <tr>
 							      <td>Biology</td>
 							      <td>200</td>
 							      <td><button className="btn btn-primary">Pay</button></td>
 							    </tr>
+
+							    :
+
+							    <tr>
+							      <td>Biology</td>
+							      <td>200</td>
+							      <td><b>Paid for</b></td>
+							    </tr>
+							  }
+
+							  {//Rendering for Chemistry Bulk Payment
+							  	this.props.studentUser.studentInfo.chemistryBulk == false ?
+							  
+							    <tr>
+							      <td>Chemistry</td>
+							      <td>200</td>
+							      <td><button className="btn btn-primary">Pay</button></td>
+							    </tr>
+
+							    :
+
+							    <tr>
+							      <td>Chemistry</td>
+							      <td>200</td>
+							      <td><b>Paid for</b></td>
+							    </tr>
+							  }
+
+							  {//Rendering for Methods Bulk Payment
+							  	this.props.studentUser.studentInfo.methodsBulk == false ?
+							  
+							    <tr>
+							      <td>Methods</td>
+							      <td>200</td>
+							      <td><button className="btn btn-primary">Pay</button></td>
+							    </tr>
+
+							    :
+
+							    <tr>
+							      <td>Methods</td>
+							      <td>200</td>
+							      <td><b>Paid for</b></td>
+							    </tr>
+							  }
+
+							  {//Rendering for Physics Bulk Payment
+							  	this.props.studentUser.studentInfo.physicsBulk == false ?
+							  
+							    <tr>
+							      <td>Physics</td>
+							      <td>200</td>
+							      <td><button className="btn btn-primary">Pay</button></td>
+							    </tr>
+
+							    :
+
+							    <tr>
+							      <td>Physics</td>
+							      <td>200</td>
+							      <td><b>Paid for</b></td>
+							    </tr>
+							  }
+
 
 							  </tbody>
 							</table>
@@ -152,7 +249,7 @@ class StudentPortal extends Component {
 						  	{
 						  		this.props.studentUser.completedPaymentsInfo.map((completedPayment) => (
 								    <tr key={completedPayment.id}>
-								      <td>{completedPayment.tutorFirstName} {completedPayment.tutorLastName}</td>
+								      <td>{completedPayment.staffFirstName} {completedPayment.staffLastName}</td>
 								      <td>{completedPayment.service}</td>
 								      <td>{completedPayment.price}</td>
 								      <td>{completedPayment.serviceDate}</td>

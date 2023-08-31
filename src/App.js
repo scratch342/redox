@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavbarComp from './NavbarComp/NavbarComp';
+import NavbarPortal from './NavbarPortal/NavbarPortal';
 import Home from './Home/Home';
 import Footer from './Footer/Footer';
 import Tutors from './Tutors/Tutors';
@@ -7,6 +8,7 @@ import Services from './Services/Services';
 import StaffPortal from './StaffPortal/StaffPortal';
 import StudentPortal from './StudentPortal/StudentPortal';
 import Login from './Login/Login';
+import Register from './Register/Register';
 
 import './App.css';
 
@@ -18,11 +20,21 @@ class App extends Component {
     super();
 
     this.state = {
-      route: 'login',
+      route: 'home',
+      loggedIn: false,
       studentUser: {
         outstandingPaymentsInfo: [],
         completedPaymentsInfo: [],
         studentInfo: {}
+      },
+
+      staffUser: {
+        students: [],
+        bulkPayees: [],
+        sessionPayees: [],
+        outstandingPaymentsInfo: [],
+        completedPaymentsInfo: [],
+        staffInfo: {}
       }
 
     }
@@ -38,16 +50,60 @@ class App extends Component {
       })
   }
 
+  loadRegister = (data) => {
+    this.setState({
+      studentUser: {
+        outstandingPaymentsInfo: [],
+        completedPaymentsInfo: [],
+        studentInfo: data
+      }
+    })
+  }
+
+  loadStaffUser = (data) => { 
+      this.setState({
+        staffUser: {
+          students: data.students,
+          bulkPayees: data.bulkPayees,
+          sessionPayees: data.sessionPayees,
+          outstandingPaymentsInfo: data.outstandingPaymentsInfo,
+          completedPaymentsInfo: data.completedPaymentsInfo,
+          staffInfo: data.staffInfo
+        }
+      })
+  }
+
+  loadOutstandingPayments = (data) => {
+    this.setState({
+      staffUser: {
+        students: this.state.staffUser.students,
+        bulkPayees: this.state.staffUser.bulkPayees,
+        sessionPayees: this.state.staffUser.sessionPayees,
+        outstandingPaymentsInfo: data,
+        completedPaymentsInfo: this.state.staffUser.completedPaymentsInfo,
+        staffInfo: this.state.staffUser.staffInfo
+      }
+    })
+  }
+
   onRouteChange = (routeGotten) => {
 
     this.setState({route: routeGotten});
-    
-    
+
+  }
+
+  onLogIn = () => {
+    this.setState({loggedIn: true})
+  }
+
+  onLogOut = () => {
+    this.setState({loggedIn: false, route: 'login'})
+
   }
 
 
   render(){
-    const { route } = this.state;
+    const { route, loggedIn } = this.state;
 
     return(
 
@@ -55,8 +111,14 @@ class App extends Component {
         <div className="App">
 
           <div className="content">
-        
+
+          {
+            loggedIn === false ?
             <NavbarComp onRouteChange={this.onRouteChange} />
+            :
+            <NavbarPortal onLogOut={this.onLogOut} />
+          }
+
             {(
               route === 'home' ?
               <Home onRouteChange={this.onRouteChange} />
@@ -68,12 +130,15 @@ class App extends Component {
               <Services onRouteChange={this.onRouteChange} />
               : 
               route === 'login' ?
-              <Login loadStudentUser={this.loadStudentUser} onRouteChange={this.onRouteChange} />
+              <Login loadStudentUser={this.loadStudentUser} loadStaffUser={this.loadStaffUser} onRouteChange={this.onRouteChange} onLogIn={this.onLogIn} />
+              :
+              route === 'register' ?
+              <Register loadRegister={this.loadRegister} loadStaffUser={this.loadStaffUser} onRouteChange={this.onRouteChange} onLogIn={this.onLogIn} />
               :
               route === 'studentPortal' ?
               <StudentPortal studentUser={this.state.studentUser} />
               :
-              <StaffPortal  />
+              <StaffPortal loadOutstandingPayments={this.loadOutstandingPayments} staffUser={this.state.staffUser} />
 
             )}
             

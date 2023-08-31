@@ -190,9 +190,9 @@ span {
 
 .footer {
   position: fixed;
-  padding-top: 2em;
+  padding-top: 1em;
   margin-top: auto;
-  padding-bottom: 3em;
+  padding-bottom: 1.5em;
   left: 0;
   bottom: 0;
   width: 100%;
