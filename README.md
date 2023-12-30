@@ -1,2 +1,0 @@
-# redox
-Redox Tutoring Website
