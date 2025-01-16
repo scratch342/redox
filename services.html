@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary sign-up">Click here to sign-up</button>
+                        <a class="nav-link" href="register.html">Register interest</a>
                     </li>
                 </ul>
             </div>
@@ -39,24 +39,30 @@
         <div class="container main-body">
             <h1 class="about-title">Services</h1>
 
-
-            <div class="alert alert-primary" role="alert">
-                <b>All Chemistry, Biology and Research Project spots are full</b> - only taking additional students for Psychology, Methods and Physics
-            </div>
-
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2">></li>
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img class="d-block carousel-img" src="Pictures/One-on-one.jpg" alt="One-on-one Tutoring">
                     <div class="carousel-caption">
-                        <h4>One-on-one Tutoring</h4>
+                        <h4>One-on-one Tutoring (Year 10, 11, 12)</h4>
                         <p>In-depth one-on-one tutoring tailored to fit your personal learning needs and academic goals.</p>
                         <hr>
-                        <p class="price-carousel">$35/hr online, $5 in-person surcharge</p>
+                        <p class="price-carousel">$50 in-person ($45 online) per hour</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img class="d-block carousel-img" src="Pictures/Group.jpg" alt="Workshops">
+                    <div class="carousel-caption">
+                        <h4>*NEW in 2025* Fortnightly Year 10 & 11 Headstart Workshops</h4>
+                        <p>Small-group intensive 90-minute lessons. These are for students that are highly motivated to perform well and wish to be challenged as much as possible. <b> (Maximum of 5 students per class, students will be selected based on assessment by tutor) </b></p>
+                        <hr>
+                        <p class="price-carousel">$40 per 90 minute session</p>
                     </div>
                   </div>
 
@@ -66,7 +72,7 @@
                         <h4>Drafting</h4>
                         <p>Comprehensive and detailed assignment drafts provided by past A+/merit achievers in offered subjects.</p>
                         <hr>
-                        <p class="price-carousel">Starting at $30 ($15 for regular students)</p>
+                        <p class="price-carousel">Starting at $40 for up to 1000 words, $10 for every additional 500 words</p>
                     </div>
                   </div>
                 </div>
@@ -85,35 +91,36 @@
             <h1 class="subjects-title">Subjects</h1>
             <div class="row">
 
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
                     <div class="card" style="height: 100%">
                     <img class="card-img-top services-img" src="Pictures/Bio.jpg" alt="Biology">
                     <div class="card-header">
                         <h5 class="card-title">SACE Biology</h5>
+                        <p class="card-text sub-card"><b>One-on-one, workshops, drafting</b></p>
                     </div>
                     <div class="card-body">
                         
-                        <p class="card-text">Taught by <b>Isaiah Ajaero</b> </p>
+                        <p class="card-text">Taught by <b>Dominic Thomas</b> </p>
                         <ul class="card-text">
-                            <li>A+ with merit (19.7/20)</li>
-                            <li>SHE Assignment won the Oliphant Trophy & Australian Institute of Biochemistry and Molecular Biology Prize</li>
+                            <li>A+ with merit in 2023</li>
                         </ul>
                     </div>
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
                     <div class="card" style="height: 100%">
                     <img class="card-img-top services-img" src="Pictures/Chem.jpg" alt="Chemistry">
                     <div class="card-header">
                         <h5 class="card-title">SACE Chemistry</h5>
+                        <p class="card-text sub-card"><b>One-on-one, workshops, drafting</b></p>
                     </div>
                     
                     <div class="card-body">
                         
                         <p class="card-text">Taught by <b>Isaiah Ajaero</b> </p>
                         <ul class="card-text">
-                            <li>A+ with merit (19.9/20)</li>
+                            <li>A+ with merit (19.9/20) in 2022</li>
                             <li>A+ in all tests, assignments and exam</li>
                         </ul>
                         
@@ -121,79 +128,50 @@
                     </div>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
-                    <div class="card" style="height: 100%">
-                    <img class="card-img-top services-img" src="Pictures/Physics.jpg" alt="Physics">
-                    <div class="card-header">
-                        <h5 class="card-title">SACE Physics</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Taught by <b>Andrew Jenke</b> </p>
-                        <ul class="card-text">
-                            <li>A+ (19.7/20)</li>
-                            <li>First-year Mechanical Engineering Student at the University of Adelaide</li>
-                        </ul>
-                    </div>
-                    </div>
-                </div>
             </div>
 
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
                     <div class="card" style="height: 100%">
-                    <img class="card-img-top services-img" src="Pictures/Maths.jpg" alt="Methods">
-                    <div class="card-header">
-                        <h5 class="card-title">SACE Methods</h5>
-                    </div>
-                    <div class="card-body">
-                        
-                            <p class="card-text">Taught by <b>Andrew Jenke</b> </p>
-                            <ul class="card-text">
-                                <li>A+ with merit (20/20)</li>
-                                <li>First-year Mechanical Engineering Student at the University of Adelaide</li>
-                            </ul>
-                    </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
-                    <div class="card" style="height: 100%">
-                    <img class="card-img-top services-img" src="Pictures/Psychology.jpg" alt="Psychology">
-                    <div class="card-header">
-                        <h5 class="card-title">SACE Psychology</h5>
-                    </div>
-                    
-                    <div class="card-body">
-                        
-                        <p class="card-text">Taught by <b>Breanna Cummins</b> </p>
-                            <ul class="card-text">
-                                <li>A+ with merit (19.5/20)</li>
-                                <li>First-year student at the University of Queensland studying a Bachelor of Psychological Science (Honours)</li>
-                            </ul>
-                        
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-3">
-                    <div class="card" style="height: 100%">
-                        <img class="card-img-top services-img" src="Pictures/RP.jpg" alt="Research Project">
+                        <img class="card-img-top services-img" src="Pictures/Maths.jpg" alt="Methods">
                         <div class="card-header">
-                            <h5 class="card-title">SACE Research Project</h5>
+                            <h5 class="card-title">SACE Methods</h5>
+                            <p class="card-text sub-card"><b>One-on-one, drafting</b></p>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Taught by <b>Isaiah Ajaero</b> </p>
-                            <ul class="card-text">
-                                <li>A+ with merit (9.75/10)</li>
-                            </ul>
+                            
+                                <p class="card-text">Taught by <b>Andrew Jenke</b> </p>
+                                <ul class="card-text">
+                                    <li>A+ with merit (20/20) in 2022</li>
+                                    <li>Second-year Mechanical Engineering Student at the University of Adelaide</li>
+                                </ul>
                         </div>
                     </div>
                 </div>
 
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+                    <div class="card" style="height: 100%">
+                        <img class="card-img-top services-img" src="Pictures/RP.jpg" alt="General Mathematics">
+                        <div class="card-header">
+                            <h5 class="card-title">SACE Gen. English & English Lit.</h5>
+                            <p class="card-text sub-card"><b>One-on-one, drafting</b></p>
+                        </div>
+                        
+                        <div class="card-body">
+                            
+                            <p class="card-text">Taught by <b>Dominic Thomas</b> </p>
+                                <ul class="card-text">
+                                    <li>A+ with merit in 2023 (in English Lit.)</li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <button class="btn btn-primary sign-up-bottom sign-up">Click here to sign-up</button>
+
+
+             <a href="register.html"><button class="btn btn-primary sign-up-bottom sign-up">Click here to sign-up</button></a>
 
         </div>
 

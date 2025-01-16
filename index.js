@@ -6,7 +6,7 @@ var navText = document.querySelectorAll('.nav-link');
 
 for(var i = 0; i < routeButton.length; i++){
     routeButton[i].addEventListener("click", function(){
-        window.open("https://forms.gle/SDwrfyzdXWVyr76W6", "_blank");
+        window.open("https://forms.gle/JQ9mRkFdxdmUmwMj9", "_blank");
     })
 }
 

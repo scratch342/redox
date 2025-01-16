@@ -2,6 +2,17 @@ html {
     height: 100%;
 }
 
+.tst {
+    margin-top: 0.5rem;
+    border: 0.2rem solid;
+    border-color: #f0ecf1;
+}
+
+.quote {
+    color: #423e43;
+    background-color: #f0ecf1;
+}
+
 body {
     max-width: 100%;
     min-height: 100%;
@@ -10,8 +21,18 @@ body {
     font-family: 'Figtree';
 }
 
+.stat {
+    font-size: 2rem;
+}
+
 .main-body {
     margin-bottom: 3rem;
+}
+
+.results {
+    background-color: #d7a5e1;
+    color: #f0ecf1;
+    padding-bottom: 3rem;
 }
 
 .nav-link {
