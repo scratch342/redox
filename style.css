@@ -144,6 +144,11 @@ span {
     color: #f0ecf1;
 }
 
+.card-header-special {
+    background-color: #f2be32;
+    color: #f0ecf1;
+}
+
 .card-title {
     font-size: 1.2em;
 }
@@ -213,4 +218,14 @@ span {
 
 .lead {
     font-size: 3vh;
+}
+
+.reg-frame {
+    padding-top: 10em;
+    width: 100%;  
+    
+}
+
+.register-container{
+    height: 100%;
 }
